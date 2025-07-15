@@ -1,1 +1,1 @@
-
+function addToCart(name, price){ alert(`${name} added for ₹${price}`); }
