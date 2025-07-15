@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OtakuFuel | Wear Your Power</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo">
+        <img src="images/logo.png" alt="OtakuFuel Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Shop</a></li>
+          <li><a href="cart.html">Cart 🛒</a></li>
+        </ul>
+      </nav>
+      <div id="theme-toggle">🌙</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Wear Your Power</h1>
+      <p>Anime-inspired premium streetwear for true fans</p>
+      <a href="#products" class="main-button">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="filters container">
+    <select id="category-filter">
+      <option value="All">All Categories</option>
+      <option value="Oversized">Oversized</option>
+      <option value="Full Sleeve">Full Sleeve</option>
+      <option value="Graphic">Graphic</option>
+    </select>
+    <select id="character-filter">
+      <option value="All">All Characters</option>
+      <option value="Naruto">Naruto</option>
+      <option value="Luffy">Luffy</option>
+    </select>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="products" class="product-grid container">
+    <!-- Naruto Tee -->
+    <div class="product-card" data-category="Oversized" data-character="Naruto">
+      <a href="product.html?name=Naruto Oversized&price=799&char=Naruto&cat=Oversized">
+        <img src="images/naruto-shirt.png" alt="Naruto Tee" />
+        <h3>Naruto Oversized Tee</h3>
+        <p>₹799</p>
+      </a>
+    </div>
+
+    <!-- Luffy Tee -->
+    <div class="product-card" data-category="Full Sleeve" data-character="Luffy">
+      <a href="product.html?name=Luffy Full Sleeve&price=999&char=Luffy&cat=Full Sleeve">
+        <img src="images/luffy-shirt.png" alt="Luffy Tee" />
+        <h3>Luffy Full Sleeve Tee</h3>
+        <p>₹999</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 OtakuFuel | Designed with ❤️ by Anav</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919717688875" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
