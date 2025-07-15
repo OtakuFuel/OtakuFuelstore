@@ -1,57 +1,89 @@
-body {
+/* Base Reset */
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
   color: #111;
-  transition: all 0.5s ease;
+  padding: 1rem;
+  transition: all 0.3s ease;
 }
-.dark-theme {
-  background-color: #111;
-  color: #f0f0f0;
-}
-.logo {
-  width: 120px;
-  margin-top: 10px;
-}
+
+/* Header */
 header {
   text-align: center;
-  padding: 20px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
-.categories, .products {
-  padding: 20px;
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: #000;
 }
-.category-list button, .buy {
-  margin: 5px;
-  padding: 10px 15px;
-  background-color: #eaeaea;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+
+header .motto {
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 0.5rem;
 }
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+
+/* Categories Section */
+.categories {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.product-img {
-  width: 100%;
-  border-radius: 12px;
+
+.categories h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
-.hidden {
-  display: none;
+
+.categories ul {
+  list-style: none;
+  text-align: center;
 }
-#cart-animation {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #ff4081;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 12px;
-  animation: pop 1s ease;
+
+.categories li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #444;
+  transition: transform 0.2s ease;
 }
-@keyframes pop {
-  0% { transform: scale(0); opacity: 0; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); }
-  }
+
+.categories li:hover {
+  transform: scale(1.05);
+  color: #e63946; /* anime red accent */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Dark Mode Toggle Ready */
+body.dark {
+  background: #0a0a0a;
+  color: #eee;
+}
+
+body.dark .categories {
+  background: #1a1a1a;
+}
+
+body.dark .categories li:hover {
+  color: #00f7ff; /* villain theme accent */
+}
