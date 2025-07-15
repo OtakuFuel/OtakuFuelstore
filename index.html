@@ -1,30 +1,142 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <title>OtakuFuel – Wear Your Power</title>
+  <title>Order – OtakuFuel</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .order-box {
+      max-width: 600px;
+      margin: auto;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .product-img {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .total-box {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 6px;
+    }
+    .btn {
+      background: green;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .note {
+      color: red;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <div class="logo-container">
-      <img src="images/logo.png" alt="OtakuFuel Logo" />
-      <div>
-        <div class="brand-name">OTAKUFUEL</div>
-        <div class="moto">Wear Your Power</div>
-      </div>
-    </div>
-    <!-- Right-side nav links will go here -->
-  </nav>
 
-  <!-- Main content -->
-  <main style="padding: 40px 20px;">
-    <h1>Welcome to OtakuFuel</h1>
-    <p>Your premium anime streetwear starts here.</p>
-  </main>
+<div class="order-box">
+  <h2>Confirm Your Order</h2>
 
-  <script src="js/script.js"></script>
+  <div id="cartPreview"></div>
+
+  <p class="note">COD is not available. You have to pay your delivery charges ₹50–₹80.</p>
+
+  <input type="text" id="name" placeholder="Full Name" required />
+  <input type="text" id="phone" placeholder="Phone Number" required />
+  <textarea id="address" placeholder="Delivery Address" rows="3" required></textarea>
+
+  <input type="text" id="coupon" placeholder="Apply Coupon (e.g., OTAKU10)" />
+  
+  <div class="total-box">
+    <p>Subtotal: ₹<span id="subtotal">0</span></p>
+    <p>Delivery Charges: ₹<span id="delivery">50</span></p>
+    <p>Discount: ₹<span id="discount">0</span></p>
+    <hr />
+    <p><strong>Total: ₹<span id="total">0</span></strong></p>
+  </div>
+
+  <button class="btn" onclick="placeOrder()">Place Order via Instagram</button>
+</div>
+
+<script>
+  let subtotal = 0;
+  let delivery = 50;
+  let discount = 0;
+
+  function loadCart() {
+    const data = JSON.parse(localStorage.getItem("cart_item"));
+    if (!data) return;
+
+    subtotal = data.price;
+
+    document.getElementById("cartPreview").innerHTML = `
+      <img src="${data.image}" class="product-img" />
+      <p><strong>${data.name}</strong></p>
+      <p>Size: ${data.size}</p>
+      <p>Price: ₹${data.price}</p>
+    `;
+
+    updateTotal();
+  }
+
+  function updateTotal() {
+    document.getElementById("subtotal").textContent = subtotal;
+    document.getElementById("delivery").textContent = delivery;
+    document.getElementById("discount").textContent = discount;
+    const total = subtotal + delivery - discount;
+    document.getElementById("total").textContent = total;
+  }
+
+  document.getElementById("coupon").addEventListener("input", function () {
+    if (this.value.trim().toUpperCase() === "OTAKU10") {
+      discount = 100;
+    } else {
+      discount = 0;
+    }
+    updateTotal();
+  });
+
+  function placeOrder() {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const total = document.getElementById("total").textContent;
+
+    if (!name || !phone || !address) {
+      alert("Please fill all details.");
+      return;
+    }
+
+    const msg = `Hi, I want to place an order on OtakuFuel:\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nTotal: ₹${total}\n\nPlease confirm.`;
+    const url = `https://instagram.com/wearotakufuel`;
+    alert("Redirecting to Instagram DM...\n\n📦 Copy this message:\n" + msg);
+
+    window.open(url, "_blank");
+  }
+
+  loadCart();
+</script>
+
 </body>
 </html>
