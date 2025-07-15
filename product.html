@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OtakuFuel | Product Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/product.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo"><img src="images/logo.png" alt="Logo" /></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart 🛒</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container product-detail">
+    <div class="product-img">
+      <img id="productImage" src="images/naruto-shirt.png" alt="Product" />
+    </div>
+    <div class="product-info">
+      <h1 id="productName">Product Name</h1>
+      <p class="price">Price: ₹<span id="productPrice">0</span></p>
+
+      <label for="size">Select Size:</label>
+      <select id="size">
+        <option value="">Choose size</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>XXL</option>
+      </select>
+
+      <button id="addToCartBtn">Add to Cart</button>
+      <button id="wishlistBtn">❤️ Wishlist</button>
+
+      <p class="desc">Premium anime streetwear made with ultra-soft fabric. Unleash your anime spirit now!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 OtakuFuel | Designed with ❤️ by Anav</p>
+  </footer>
+
+</body>
+  </html>
