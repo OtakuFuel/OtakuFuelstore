@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OtakuFuel – Wear Your Power</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="OtakuFuel logo" class="logo">
-    <button id="theme-toggle">☀️ Peace</button>
+
+  <header class="header">
+    <img src="images/logo.png" alt="OtakuFuel Logo" class="logo" />
     <h1>OtakuFuel</h1>
-    <p class="motto">Wear Your Power</p>
+    <p class="tagline">Wear Your Power</p>
+    <button id="themeToggle">☀️ Peace</button>
   </header>
 
   <main>
-    <section class="categories">
+    <section class="product-section">
       <h2>Our Tees</h2>
-      <ul>
+      <ul class="categories">
         <li>Crew Neck</li>
         <li>V-Neck</li>
         <li>Henley</li>
@@ -26,14 +28,22 @@
         <li>Oversized</li>
         <li>Boxer Tees</li>
       </ul>
+
+      <div class="cod-warning">
+        ⚠️ Cash on Delivery available. ₹50 extra delivery charge.
+      </div>
+    </section>
+
+    <section class="cart-actions">
+      <button class="cart-btn">Add to Cart</button>
+      <a href="https://wa.me/919999999999" target="_blank" class="buy-btn">Buy Now</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 OtakuFuel. All rights reserved.</p>
+    <p>© 2025 OtakuFuel. All rights reserved.</p>
   </footer>
 
-  <!-- 👇 JavaScript for theme toggle -->
   <script src="js/script.js"></script>
 </body>
 </html>
