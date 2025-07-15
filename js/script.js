@@ -1,1 +1,1 @@
-// script.js: cart, filters, theme toggle, localStorage wishlist, coupon logic
+// Placeholder JS
