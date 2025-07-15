@@ -1,67 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OtakuFuel — Wear Your Power</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <title>OtakuFuel – Wear Your Power</title>
 </head>
 <body>
-  <header class="navbar">
-    <img src="images/logo.png" class="nav-logo" />
-    <nav>
-      <a href="#">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</a>
-    </nav>
-    <input type="text" id="search" placeholder="Search..." onkeyup="searchProducts()" />
-  </header>
-
-  <section class="hero">
-    <h1 class="headline">Wear Your Power.</h1>
-    <p class="subtext">Inspired by anime. Styled for the streets.</p>
-    <a href="#shop" class="shop-button">Shop Now</a>
-  </section>
-
-  <section id="shop" class="products">
-    <div class="product" data-name="naruto">
-      <a href="product.html"><img src="images/naruto-shirt.png" /></a>
-      <h2>Naruto Oversized Tee</h2>
-      <p>₹999</p>
-      <a href="product.html"><button>View</button></a>
+  <nav>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="OtakuFuel Logo" />
+      <div>
+        <div class="brand-name">OTAKUFUEL</div>
+        <div class="moto">Wear Your Power</div>
+      </div>
     </div>
-    <div class="product" data-name="luffy">
-      <img src="images/luffy-shirt.png" />
-      <h2>Luffy Graphic Tee</h2>
-      <p>₹899</p>
-      <button onclick="addToCart('Luffy Graphic Tee', 899)">Add to Cart</button>
-    </div>
-  </section>
+    <!-- Right-side nav links will go here -->
+  </nav>
 
-  <section id="about">
-    <h2>The Story Behind OtakuFuel</h2>
-    <p>We’re not just another T-shirt store. We’re a fan-powered movement.</p>
-  </section>
+  <!-- Main content -->
+  <main style="padding: 40px 20px;">
+    <h1>Welcome to OtakuFuel</h1>
+    <p>Your premium anime streetwear starts here.</p>
+  </main>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form onsubmit="event.preventDefault(); alert('Message Sent!')">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>Quick Links: Privacy Policy | Return Policy | FAQ</p>
-    <p>Designed with passion by Anav ❤️</p>
-    <p>&copy; 2025 OtakuFuel – All Rights Reserved</p>
-  </footer>
-
-  <a href="https://wa.me/919717688875" class="whatsapp-button" target="_blank">💬</a>
   <script src="js/script.js"></script>
 </body>
 </html>

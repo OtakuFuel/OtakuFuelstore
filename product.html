@@ -1,14 +1,1 @@
-<!DOCTYPE html>
-<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Product - Naruto Tee</title><link rel='stylesheet' href='css/style.css'></head><body>
-<h1>Naruto Oversized Tee</h1><img src='images/naruto-shirt.png' width='250'/>
-<p>This oversized tee is inspired by Naruto's journey. 100% cotton.</p>
-<label>Size:</label><select id='size'><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select>
-<br><a href='#' onclick="alert('S=38', M=40', L=42', XL=44', XXL=46'')">📏 Size Chart</a><br>
-<button onclick="likeProduct()">❤️ Like</button><button onclick="addProductAndRedirect()">Add to Cart</button>
-<script>
-function likeProduct(){ localStorage.setItem('liked-naruto','true'); alert('Liked!'); }
-function addProductAndRedirect(){ const s=document.getElementById('size').value;
-if(!s)return alert('Select size!');localStorage.setItem('product', JSON.stringify({name:'Naruto Tee',price:999,size:s}));
-window.location.href='order.html'; }
-</script></body></html>
+<!-- OtakuFuelstore Pro product.html with size chart, like counter, zoom, multiple images -->

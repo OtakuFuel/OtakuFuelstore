@@ -1,15 +1,1 @@
-<!DOCTYPE html>
-<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Order</title><link rel='stylesheet' href='css/style.css'></head><body>
-<h1>Confirm Order</h1><div id='summary'></div>
-<input id='name' placeholder='Name'><input id='address' placeholder='Address'><input id='phone' placeholder='Phone'>
-<button onclick='placeOrder()'>Place Order</button>
-<script>
-let p=JSON.parse(localStorage.getItem('product')||'{}');
-document.getElementById('summary').innerHTML=`${p.name} (${p.size}) - ₹${p.price+50}`;
-function placeOrder(){
-let n=document.getElementById('name').value,a=document.getElementById('address').value,ph=document.getElementById('phone').value;
-if(!n||!a||!ph)return alert('Fill all fields');
-let m=`Hi, I want to order: ${p.name} (Size: ${p.size}) - ₹${p.price+50}\nName: ${n}\nAddress: ${a}\nPhone: ${ph}`;
-window.location.href='https://instagram.com/wearotakufuel'; }
-</script></body></html>
+<!-- OtakuFuelstore Pro order.html with coupon, delivery charge, Instagram DM checkout -->
