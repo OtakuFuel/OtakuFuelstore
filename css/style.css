@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset base styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,39 +7,39 @@
 }
 
 body {
-  background: #fff;
+  background: #fdfdfd;
   color: #111;
   padding: 1rem;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-/* Header */
+/* Header styles */
 header {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
 }
 
 header h1 {
-  font-size: 3rem;
-  letter-spacing: 1px;
-  color: #000;
+  font-size: 2.8rem;
+  color: #111;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-header .motto {
+.motto {
   font-size: 1.1rem;
-  color: #888;
+  color: #777;
   margin-top: 0.5rem;
 }
 
-/* Categories Section */
+/* Categories section */
 .categories {
-  background: #f4f4f4;
-  padding: 1.5rem;
+  background: #f3f3f3;
+  padding: 2rem;
   border-radius: 16px;
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .categories h2 {
@@ -51,39 +51,27 @@ header .motto {
 
 .categories ul {
   list-style: none;
+  padding: 0;
   text-align: center;
 }
 
 .categories li {
-  margin: 0.5rem 0;
+  margin: 0.7rem 0;
   font-size: 1.1rem;
   color: #444;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .categories li:hover {
   transform: scale(1.05);
-  color: #e63946; /* anime red accent */
+  color: #ff4d6d; /* Anime red hover accent */
 }
 
 /* Footer */
 footer {
   text-align: center;
   margin-top: 3rem;
+  padding: 1rem 0;
   font-size: 0.9rem;
-  color: #777;
-}
-
-/* Dark Mode Toggle Ready */
-body.dark {
-  background: #0a0a0a;
-  color: #eee;
-}
-
-body.dark .categories {
-  background: #1a1a1a;
-}
-
-body.dark .categories li:hover {
-  color: #00f7ff; /* villain theme accent */
+  color: #888;
 }
