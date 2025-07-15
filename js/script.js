@@ -1,1 +1,1 @@
-// JS: addToCart, toggleTheme, wishlist, coupon logic, share, filters, animations
+// script.js: cart, filters, theme toggle, localStorage wishlist, coupon logic
