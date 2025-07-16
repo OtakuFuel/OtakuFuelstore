@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | OtakuFuel</title>
+  <link rel="stylesheet" href="css/auth-style.css">
+</head>
+<body class="signup-page">
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1>Welcome Back 🥷</h1>
+      <p class="anime-quote">"Power comes in response to a need, not a desire." – Goku</p>
+      <form id="loginForm">
+        <label>Email ID</label>
+        <input type="email" name="email" required placeholder="e.g. goku@otakufuel.com" />
+
+        <label>Password</label>
+        <input type="password" name="password" required placeholder="Enter your password" />
+
+        <button type="submit">Login</button>
+        <p class="login-link">Don’t have an account? <a href="signup.html">Sign up here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = this.email.value;
+      const password = this.password.value;
+
+      const storedEmail = localStorage.getItem("email");
+      const storedPassword = localStorage.getItem("password");
+
+      if (email === storedEmail && password === storedPassword) {
+        alert("Login successful!");
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid credentials");
+      }
+    });
+  </script>
+</body>
+</html>
