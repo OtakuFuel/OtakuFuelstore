@@ -1,6 +1,5 @@
 document.getElementById("signupForm")?.addEventListener("submit", function(e) {
   e.preventDefault();
-
   const name = this.name.value;
   const email = this.email.value;
   const password = this.password.value;
