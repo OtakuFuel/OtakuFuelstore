@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup | OtakuFuel</title>
+  <link rel="stylesheet" href="css/auth-style.css" />
+</head>
+<body class="signup-page">
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1>Signup</h1>
+      <p class="anime-quote">"Become a true anime fan."</p>
+      <form id="signupForm">
+        <label>Name</label>
+        <input type="text" name="name" required />
+
+        <label>Email ID</label>
+        <input type="email" name="email" required />
+
+        <label>Password</label>
+        <input type="password" name="password" required />
+
+        <label>Address Line 1</label>
+        <input type="text" name="address1" required />
+
+        <label>Address Line 2</label>
+        <input type="text" name="address2" />
+
+        <label>City</label>
+        <input type="text" name="city" required />
+
+        <label>State</label>
+        <input type="text" name="state" required />
+
+        <label>Pincode</label>
+        <input type="number" name="pincode" required />
+
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>
