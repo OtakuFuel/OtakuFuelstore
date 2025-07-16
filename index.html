@@ -2,86 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OtakuFuel | Wear Your Power</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OtakuFuel</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-flex">
-      <div class="logo">
-        <img src="images/logo.png" alt="OtakuFuel Logo" />
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#products">Shop</a></li>
-          <li><a href="cart.html">Cart 🛒</a></li>
-        </ul>
-      </nav>
-      <div id="theme-toggle">🌙</div>
-    </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="OtakuFuel Logo" class="logo" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero-section">
-    <div class="container">
-      <h1>Wear Your Power</h1>
-      <p>Anime-inspired premium streetwear for true fans</p>
-      <a href="#products" class="main-button">Explore Now</a>
-    </div>
+  <!-- Page Sections -->
+  <section id="home" class="section">
+    <h1>Welcome to OtakuFuel</h1>
+    <p>Anime-Inspired Streetwear</p>
   </section>
 
-  <!-- Filters -->
-  <section class="filters container">
-    <select id="category-filter">
-      <option value="All">All Categories</option>
-      <option value="Oversized">Oversized</option>
-      <option value="Full Sleeve">Full Sleeve</option>
-      <option value="Graphic">Graphic</option>
-    </select>
-    <select id="character-filter">
-      <option value="All">All Characters</option>
-      <option value="Naruto">Naruto</option>
-      <option value="Luffy">Luffy</option>
-    </select>
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>OtakuFuel blends anime passion with fashion culture for Gen Z heroes.</p>
   </section>
 
-  <!-- Product Grid -->
-  <section id="products" class="product-grid container">
-    <!-- Naruto Tee -->
-    <div class="product-card" data-category="Oversized" data-character="Naruto">
-      <a href="product.html?name=Naruto Oversized&price=799&char=Naruto&cat=Oversized">
-        <img src="images/naruto-shirt.png" alt="Naruto Tee" />
-        <h3>Naruto Oversized Tee</h3>
-        <p>₹799</p>
-      </a>
-    </div>
-
-    <!-- Luffy Tee -->
-    <div class="product-card" data-category="Full Sleeve" data-character="Luffy">
-      <a href="product.html?name=Luffy Full Sleeve&price=999&char=Luffy&cat=Full Sleeve">
-        <img src="images/luffy-shirt.png" alt="Luffy Tee" />
-        <h3>Luffy Full Sleeve Tee</h3>
-        <p>₹999</p>
-      </a>
-    </div>
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <p>Premium quality oversized anime tees with fast shipping and COD options.</p>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 OtakuFuel | Designed with ❤️ by Anav</p>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919717688875" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-    💬
-  </a>
 
 </body>
 </html>
