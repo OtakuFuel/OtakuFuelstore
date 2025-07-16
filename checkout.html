@@ -1,99 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Checkout | OtakuFuel</title>
-  <link rel="stylesheet" href="css/auth-style.css" />
-</head>
-<body class="signup-page">
-
-<script>
-  if (localStorage.getItem("isLoggedIn") !== "true") {
-    alert("Please login first to place your order.");
-    window.location.href = "login.html";
-  }
-</script>
-
-<div class="auth-container">
-  <div class="auth-card">
-    <h1>Checkout 🧾</h1>
-    <p class="anime-quote">"Time to power up your wardrobe!"</p>
-    <form id="checkoutForm">
-      <label>Full Name</label>
-      <input type="text" name="name" required />
-
-      <label>Email ID</label>
-      <input type="email" name="email" required />
-
-      <label>Phone Number</label>
-      <input type="tel" name="phone" required />
-
-      <label>Product Name</label>
-      <input type="text" name="product" required placeholder="e.g. Naruto Oversized Tee" />
-
-      <label>Size</label>
-      <select name="size" required>
-        <option value="">Select size</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-        <option value="XXL">XXL</option>
-      </select>
-
-      <label>Address Line 1</label>
-      <input type="text" name="address1" required />
-
-      <label>Address Line 2</label>
-      <input type="text" name="address2" />
-
-      <label>City</label>
-      <input type="text" name="city" required />
-
-      <label>State</label>
-      <input type="text" name="state" required />
-
-      <label>Pincode</label>
-      <input type="number" name="pincode" required />
-
-      <label>UPI Transaction ID</label>
-      <input type="text" name="transaction" required />
-
-      <p style="margin-top:10px;">💳 Pay to: <strong>otakufuelstore@okhdfcbank</strong><br/>
-        📱 Number: <strong>+91 9717688875</strong><br/>
-        Supported: GPay, PhonePe, Paytm</p>
-
-      <button type="submit">Place Order</button>
-    </form>
-  </div>
-</div>
-
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+  emailjs.init("En2B-P6igP205vUDP"); // Your public key
 
   document.getElementById("checkoutForm").addEventListener("submit", function(e) {
     e.preventDefault();
     const form = e.target;
+
     const data = {
       name: form.name.value,
       email: form.email.value,
       phone: form.phone.value,
-      address: form.address1.value + ", " + form.address2.value + ", " + form.city.value + ", " + form.state.value + " - " + form.pincode.value,
-      transaction_id: form.transaction.value,
       product: form.product.value,
-      size: form.size.value
+      size: form.size.value,
+      address: form.address1.value + ", " + form.address2.value + ", " + form.city.value + ", " + form.state.value + " - " + form.pincode.value,
+      transaction_id: form.transaction.value
     };
 
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", data)
+    emailjs.send("service_4fckmn3", "template_phafcdj", data)
       .then(() => {
-        alert("Order placed! You'll receive a confirmation email.");
+        alert("✅ Order placed! Confirmation sent to your email.");
         localStorage.removeItem("cart");
         window.location.href = "index.html";
       })
-      .catch(err => alert("Failed to send order: " + err));
+      .catch(err => {
+        console.error("❌ Email send failed:", err);
+        alert("Something went wrong. Please try again.");
+      });
   });
 </script>
-</body>
-</html>
