@@ -1,0 +1,51 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.auth-card {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+.auth-card h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+.auth-card input, .auth-card select, .auth-card button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.auth-card button {
+  background: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.auth-card button:hover {
+  background: #e53935;
+}
+.auth-card a {
+  color: #90caf9;
+  text-decoration: none;
+}
+.auth-card a:hover {
+  text-decoration: underline;
+}
+.anime-quote {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
