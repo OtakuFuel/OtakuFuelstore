@@ -8,13 +8,11 @@ body.signup-page {
   min-height: 100vh;
   margin: 0;
 }
-
 .auth-container {
   width: 100%;
   max-width: 400px;
   padding: 20px;
 }
-
 .auth-card {
   background-color: rgba(0, 0, 0, 0.85);
   border: 2px solid #6a0dad;
@@ -22,13 +20,11 @@ body.signup-page {
   padding: 30px;
   box-shadow: 0 0 25px #6a0dad;
 }
-
 .auth-card h1 {
   font-size: 24px;
   margin-bottom: 10px;
   text-align: center;
 }
-
 .anime-quote {
   font-size: 0.9rem;
   color: #bbb;
@@ -36,13 +32,11 @@ body.signup-page {
   margin-bottom: 20px;
   font-style: italic;
 }
-
 form label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
 }
-
 form input {
   width: 100%;
   padding: 10px;
@@ -52,7 +46,6 @@ form input {
   color: #fff;
   margin-top: 5px;
 }
-
 form button {
   width: 100%;
   padding: 12px;
@@ -65,18 +58,15 @@ form button {
   cursor: pointer;
   transition: background 0.3s;
 }
-
 form button:hover {
   background: #51009a;
 }
-
 .login-link {
   margin-top: 15px;
   text-align: center;
   font-size: 0.9rem;
 }
-
 .login-link a {
   color: #ccc;
   text-decoration: underline;
-  }
+}
