@@ -22,20 +22,41 @@
     <form id="checkoutForm">
       <label>Full Name</label>
       <input type="text" name="name" required />
+
       <label>Email ID</label>
       <input type="email" name="email" required />
+
       <label>Phone Number</label>
       <input type="tel" name="phone" required />
+
+      <label>Product Name</label>
+      <input type="text" name="product" required placeholder="e.g. Naruto Oversized Tee" />
+
+      <label>Size</label>
+      <select name="size" required>
+        <option value="">Select size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+      </select>
+
       <label>Address Line 1</label>
       <input type="text" name="address1" required />
+
       <label>Address Line 2</label>
       <input type="text" name="address2" />
+
       <label>City</label>
       <input type="text" name="city" required />
+
       <label>State</label>
       <input type="text" name="state" required />
+
       <label>Pincode</label>
       <input type="number" name="pincode" required />
+
       <label>UPI Transaction ID</label>
       <input type="text" name="transaction" required />
 
@@ -50,7 +71,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  emailjs.init("YOUR_PUBLIC_KEY"); // replace this with your EmailJS public key
+  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
 
   document.getElementById("checkoutForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -60,7 +81,9 @@
       email: form.email.value,
       phone: form.phone.value,
       address: form.address1.value + ", " + form.address2.value + ", " + form.city.value + ", " + form.state.value + " - " + form.pincode.value,
-      transaction_id: form.transaction.value
+      transaction_id: form.transaction.value,
+      product: form.product.value,
+      size: form.size.value
     };
 
     emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", data)
@@ -73,4 +96,4 @@
   });
 </script>
 </body>
-        </html>
+</html>
